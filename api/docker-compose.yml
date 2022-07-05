@@ -1,0 +1,18 @@
+services:
+  postgres:
+    environment:
+      POSTGRES_DB: skillane
+      POSTGRES_PASSWORD: skillane
+      POSTGRES_USER: skillane
+    image: postgres:14-alpine
+    networks:
+      default: null
+    platform: linux/amd64
+    ports:
+    - mode: ingress
+      target: 5432
+      published: 5432
+      protocol: tcp
+networks:
+  default:
+    name: skillane
