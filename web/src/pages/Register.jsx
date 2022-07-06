@@ -73,26 +73,53 @@ function Register() {
         </div>
         <div className="mt-2 mb-4 grid grid-cols-2 ">
           <label className="text-left">Gender</label>
-          <input
-            className="w-40  "
-            type="text"
-            name="gender"
-            onChange={(e) => {
-              setForm({ ...form, gender: e.target.value });
-            }}
-          />
+          <div>
+            <input
+              type="radio"
+              id="Male"
+              name="age"
+              value="Male"
+              onChange={(e) => {
+                setForm({ ...form, gender: e.target.value });
+              }}
+            />
+            <label for="Male">Male</label>{" "}
+            <input
+              type="radio"
+              id="Female"
+              name="age"
+              value="Female"
+              onChange={(e) => {
+                setForm({ ...form, gender: e.target.value });
+              }}
+            />
+            <label for="Female">Female</label>
+          </div>
         </div>
         <div className="mt-2 mb-4 grid grid-cols-2 ">
           <label className="text-left">Role </label>
-          <input
-            className="w-40  "
-            type="text"
-            name="role"
-            value={form.role}
-            onChange={(e) => {
-              setForm({ ...form, role: e.target.value });
-            }}
-          />
+          <div>
+            <input
+              type="radio"
+              id="student"
+              name="role"
+              value="Student"
+              onChange={(e) => {
+                setForm({ ...form, role: e.target.value });
+              }}
+            />
+            <label for="student">Student</label>{" "}
+            <input
+              type="radio"
+              id="instructor"
+              name="role"
+              value="Instructor"
+              onChange={(e) => {
+                setForm({ ...form, role: e.target.value });
+              }}
+            />
+            <label for="instructor">Instructor</label>
+          </div>
         </div>
         <div className="mt-2 mb-4 grid grid-cols-2 ">
           <label className="text-left">Username </label>

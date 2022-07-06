@@ -73,14 +73,28 @@ function Profile() {
         </div>
         <div className="mt-2 mb-4 grid grid-cols-2 ">
           <label className="text-left">Gender</label>
-          <input
-            className="w-40  "
-            type="text"
-            name="gender"
-            onChange={(e) => {
-              setForm({ ...form, gender: e.target.value });
-            }}
-          />
+          <div>
+            <input
+              type="radio"
+              id="Male"
+              name="age"
+              value="Male"
+              onChange={(e) => {
+                setForm({ ...form, gender: e.target.value });
+              }}
+            />
+            <label for="Male">Male</label>{" "}
+            <input
+              type="radio"
+              id="Female"
+              name="age"
+              value="Female"
+              onChange={(e) => {
+                setForm({ ...form, gender: e.target.value });
+              }}
+            />
+            <label for="Female">Female</label>
+          </div>
         </div>
 
         <div className="grid grid-cols-2">

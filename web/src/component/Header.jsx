@@ -27,7 +27,7 @@ function Header() {
   }, [search]);
   return (
     <div className="h-9 flex justify-end items-center bg-slate-400 p-4">
-      <div className="w-2/6">
+      <div className="w-2/6 ">
         <input
           type="text"
           placeholder="Search"
